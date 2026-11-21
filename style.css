@@ -1,0 +1,51 @@
+:root {
+  --bg: #ffffff;
+  --text: #1c1b22;
+  --muted: #6b6878;
+  --accent: #5b3fe0;
+  --accent-soft: #efebff;
+  --rule: #e7e4f0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141219;
+    --text: #f2f0f7;
+    --muted: #a5a1b3;
+    --accent: #9d8bff;
+    --accent-soft: #241f3a;
+    --rule: #2c2838;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 ui-rounded, -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", Roboto, sans-serif;
+}
+header {
+  background: linear-gradient(180deg, #6a4ff0, #5039c8);
+  color: #fff;
+}
+header .inner, main, footer { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+header .inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 18px; padding-bottom: 18px; flex-wrap: wrap; }
+header a { color: #fff; text-decoration: none; }
+.brand { font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+.brand::before { content: ""; display: inline-block; width: 22px; height: 6px; border-radius: 3px; background: #3ee6b0; margin-right: 10px; vertical-align: middle; }
+nav { display: flex; gap: 18px; font-size: 15px; }
+nav a { opacity: 0.85; }
+nav a[aria-current="page"] { opacity: 1; font-weight: 700; }
+main { padding-top: 28px; padding-bottom: 40px; }
+h1 { font-size: 34px; line-height: 1.15; letter-spacing: -0.02em; margin: 8px 0 12px; }
+h2 { font-size: 22px; margin: 36px 0 8px; padding-top: 20px; border-top: 1px solid var(--rule); }
+h3 { font-size: 18px; margin: 26px 0 4px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+em:first-child:only-child { color: var(--muted); font-style: normal; font-size: 15px; }
+strong { font-weight: 700; }
+footer { padding-bottom: 36px; color: var(--muted); font-size: 14px; }
+footer .inner { border-top: 1px solid var(--rule); padding-top: 16px; }
